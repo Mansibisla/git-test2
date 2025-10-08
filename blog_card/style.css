@@ -1,0 +1,113 @@
+/* ***** COLORS USED *****
+YELLOW : hsl(47, 88%, 63%) 
+BLACK : hsl(0, 0%, 7%)
+GREY : hsl(0, 0%, 42%)
+***** FONT SIZE *****
+1rem/0.8rem
+***** FONT WEIGHT ***** 
+600/800
+*/
+
+/*resets all the properties*/
+* {
+    box-sizing: border-box;
+    /*governs how the size of box is calculated*/
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: hsl(47, 88%, 63%);
+     display: flex;
+    align-items: center;
+    justify-content: center; 
+    min-height: 100vh;
+    /*maintains the size of whole body element i.e. fit in the screen*/
+    font-family: 'Figtree', sans-serif;
+
+}
+header,nav{
+display: none;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*for aligning the content inside the main in center horizontally*/
+    align-items: center;
+    min-height: 100vh;
+    /* Keep this line to avoid duplication */
+}
+
+.main-card {
+    background: hsl(0, 0%, 100%);
+    border: 1.5px solid black;
+    border-radius: 15px;
+    padding: 2vw;
+    width: 80%;
+    /*adjust width according to screen  size*/
+    max-width: 30rem;
+    /*desktop limit*/
+    box-shadow: 1vw 1vw 0 hsl(0, 0%, 7%);
+}
+
+.illustration {
+    width: 100%;
+    /*adjust the image size*/
+    border-radius: clamp(0.5rem, 1vw, 1rem);
+    margin-bottom: clamp(0.5rem, 1vw, 1rem);
+}
+
+.btn {
+    background-color: hsl(47, 88%, 63%);
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    padding: clamp(0.2rem, 1vw, 0.6rem) clamp(0.6rem, 1vw, 1rem);
+    border-radius: clamp(0.3rem, 1vw, 0.5rem);
+    font-size: clamp(0.8rem, 1vw, 1rem);
+    margin-bottom: clamp(0.5rem, 2vw, 1rem);
+    font-weight: 800;
+}
+
+.date,
+.title,
+.description {
+    margin-bottom: clamp(0.5rem, 3vw, 1rem);
+}
+
+.date {
+    color: hsl(0, 0%, 7%);
+    font-size: clamp(0.5rem, 3vw, 1rem);
+    font-weight: 600;
+}
+
+.title {
+    color: hsl(0, 0%, 7%);
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-weight: 800;
+}
+
+.description {
+    color: hsl(0, 0%, 42%);
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-weight: 600;
+}
+
+.img-card {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    /*for maintaing gap between the image and the name*/
+}
+
+.id-icon {
+    width: clamp(2rem, 5vw, 3rem);
+    /*min size, preferred fluid size, max size*/
+}
+
+.name-creator {
+    color: hsl(0, 0%, 7%);
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-weight: 800;
+}
